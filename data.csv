@@ -1,0 +1,196 @@
+id,value,uid
+Melomys rubicol,0,1
+Emoia nativitatis,2,2
+Aegolius gradyi,5,3
+Neofelis nebulosa brachyura,6,4
+Chioninia coctei,6,5
+Chelonoidis abingdonii,7,6
+Lutra lutra whiteleyi,7,7
+Diceros bicornis longipes,8,8
+Puma concolor couguar,8,9
+Lipotes vexillifer,13,10
+Capra pyrenaica pyrenaica,19,11
+Levuana irridescens,25,12
+Borikenophis sanctaecrucis,25,13
+Ammodramus maritimus nigrescens,29,14
+Incilius periglenes,30,15
+Moho braccatus,32,16
+Rheobatrachus,34,17
+Heliaster solaris,35,18
+Bos sauveli,36,19
+Rheobatrachus,38,20
+Epioblasma torulosa,38,21
+Panthera tigris sondaica,43,22
+Zalophus japonicus,45,23
+Panthera tigris tigris,49,24
+Struthio camelus syriacus,53,25
+Epioblasma turgidula,54,26
+Cryptonanus ignitus,57,27
+Ursus arctos,55,28
+Noturus trautmani,62,29
+Onychogalea lunata,63,30
+Campephilus imperialis,63,31
+Canis lupus bernardi,67,32
+Neomonachus tropicalis,67,33
+Panthera leo leo,77,34
+Canis lupus monstrabilis,77,35
+Canis lupus fuscus,79,36
+Macropus greyi,80,37
+Panthera tigris sondaica,82,38
+Thylacinus cynocephalus,83,39
+Canis lupus mogollonensis,84,40
+Caloprymnus campestris,84,41
+Nesoryzomys indefessus,85,42
+Tympanuchus cupido cupido,87,43
+Nesoryzomys darwini,89,44
+Canis lupus alces,94,45
+Ursus arctos californicus,95,46
+Conuropsis carolinensis,101,47
+Ectopistes migratorius,105,48
+Canis lupus beothucus,108,49
+Equus ferus ferus,110,50
+Heteralocha acutirostris,112,51
+Canis lupus hodophilax,114,52
+Melanoplus spretus,117,53
+Lagorchestes leporides,129,54
+Canis lupus hattai,130,55
+Equus quagga quagga,136,56
+Cervus canadensis canadensis,139,57
+Ursus arctos crowtheri,140,58
+Camptorhynchus labradorius,141,59
+Dusicyon australis,143,60
+Potorous platyops,144,61
+Neovison macrodon,159,62
+Pinguinus impennis,167,63
+Tachygyia microlepis,192,64
+Alectroenas nitidissimus,193,65
+Aplonis mavornata,194,66
+Hippotragus leucophaeus,219,67
+Porphyrio albus,229,68
+Cyanoramphus ulietanus,242,69
+Prolagus sardus,245,70
+Prosobonia leucoptera,246,71
+Hydrodamalis gigas,251,72
+Aepyornis maximus,329,73
+Madagascar,357,74
+Chenonetta finschi,374,75
+Bos primigenius,392,76
+Megadyptes waitaha,469,77
+Palaeopropithecus,579,78
+Pachyornis elephantopus,619,79
+Pachyornis geranoides,619,80
+Pachyornis australis,619,81
+Euryapteryx curtus,1183,82
+Euryapteryx geranoides,1183,83
+Emeus crassus,619,84
+Anomalopteryx didiformis,619,85
+Dinornis novaezealandiae,619,86
+Dinornis struthoides,619,87
+Dinornis giganteus,619,88
+Dinornis robustus,619,89
+Hieraaetus moorei,619,90
+Nesophontes,659,91
+Thambetochen chauliodous,839,92
+Aegotheles novazelandiae,1023,93
+Vini sinotoi,1069,94
+Vini vidivici,1069,95
+Plesiorycteropus,1104,96
+Branta hylobadistes,1119,97
+Daubentonia robusta,1134,98
+Heteropsomys insulans,1288,99
+Pachylemur insignis,1289,100
+Puffinus olsoni,1334,101
+Alopochen sirabensis,1449,102
+Mesopropithecus pithecoides,1479,103
+Hadropithecus,1482,104
+Meiolania,1569,105
+Loxodonta africana pharaohensis,1719,106
+Mesopropithecus globiceps,1763,107
+Rhynochetos orarius,1819,108
+Caloenas canacorum,1819,109
+Porphyrio kukwiedei,1819,110
+Megapodius molistructor,1819,111
+Accipiter efficax,1819,112
+Apteribis,1919,113
+Coua primaeva,2049,114
+Elephas maximus asurus,2119,115
+Archaeolemur edwardsi,2129,116
+Archaeolemur majori,2129,117
+Xenothrix mcgregori,2214,118
+Archaeoindris fontoynonti,2360,119
+Crocidura balsamifera,2469,120
+Elasmodontomys obliquus,2476,121
+Microgale macpheei,2549,122
+Megapodius alimentum,2809,123
+Thylogale christenseni,3319,124
+Acratocnus odontrigonus,3399,125
+Sylviornis,3539,126
+Mammuthus primigenius,3719,127
+Antillothrix bernensis,519,128
+Megalocnus rodens,4259,129
+Nesotrochis,4259,130
+Neocnus comes,4260,131
+Ardea bennuides,4569,132
+Pelorovis antiquus,4784,133
+Myotragus balearicus,4854,134
+Dusicyon avus,4934,135
+Parocnus browni,5029,136
+Rallus eivissensis,6199,137
+Doedicurus clavicaudatus,6624,138
+Megaloceros giganteus,6885,139
+Dactylopsila kambuaya,6969,140
+Petauroides ayamaruensis,6969,141
+Praemegaceros cazioti ,7039,142
+Megatherium americanum,7389,143
+Antidorcas bondi,7639,144
+Siphonorhis daiquiri,7933,145
+Megalotragus priscus,8069,146
+Bubo insularis,8294,147
+Camelops,8309,148
+Hemiauchenia,8596,149
+Mylodon,8708,150
+Ochotona whartoni,8739,151
+Mammuthus columbi,8749,152
+Bison priscus,8929,153
+Scelidodon chiliensis,8979,154
+Smilodon populator ,9199,155
+Hippopotamus minor,9309,156
+Canis dirus,9469,157
+Mylohyus,9479,158
+Palaeoloxodon cypriotes,9489,159
+Sangamona,9509,160
+Megalonyx jeffersonii,9509,161
+Catonyx cuvieri,9649,162
+Nothrotheriops,9909,163
+Holmesina,9949,164
+Glossotherium,9949,165
+Tapirus veroensis,9949,166
+Palaeolama mirifica,9949,167
+Amerhippus,10259,168
+Glyptodon,10259,169
+Toxodon,10259,170
+Castoroides,10299,171
+Cervalces scotti,10299,172
+Martes nobilis,10439,173
+Panthera leo atrox,10439,174
+Elephas americanum,10464,175
+Hippidion,10754,176
+Oreamnos harringtoni,10939,177
+Bootherium bombifrons,11049,178
+Mammuthus exilis,11099,179
+Scelidotherium,11109,180
+Stegomastodon,11109,181
+Platygonus,11129,182
+Panthera onca mesembrina,11154,183
+Symbos,11169,184
+Bison antiquus,11199,185
+Capromeryx,11239,186
+Stockoceros,11399,187
+Equus conversidens,11399,188
+Eremotherium,11409,189
+Cynotherium sardous,11419,190
+Arctodus simus,11549,191
+Arctotherium,11669,192
+Euceratherium,11699,193
+Fratercula dowi,11959,194
+Cuvieronius,11969,195
