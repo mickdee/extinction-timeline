@@ -1,196 +1,196 @@
-id,value,uid
-Melomys rubicol,0,1
-Emoia nativitatis,2,2
-Aegolius gradyi,5,3
-Neofelis nebulosa brachyura,6,4
-Chioninia coctei,6,5
-Chelonoidis abingdonii,7,6
-Lutra lutra whiteleyi,7,7
-Diceros bicornis longipes,8,8
-Puma concolor couguar,8,9
-Lipotes vexillifer,13,10
-Capra pyrenaica pyrenaica,19,11
-Levuana irridescens,25,12
-Borikenophis sanctaecrucis,25,13
-Ammodramus maritimus nigrescens,29,14
-Incilius periglenes,30,15
-Moho braccatus,32,16
-Rheobatrachus,34,17
-Heliaster solaris,35,18
-Bos sauveli,36,19
-Rheobatrachus,38,20
-Epioblasma torulosa,38,21
-Panthera tigris sondaica,43,22
-Zalophus japonicus,45,23
-Panthera tigris tigris,49,24
-Struthio camelus syriacus,53,25
-Epioblasma turgidula,54,26
-Cryptonanus ignitus,57,27
-Ursus arctos,55,28
-Noturus trautmani,62,29
-Onychogalea lunata,63,30
-Campephilus imperialis,63,31
-Canis lupus bernardi,67,32
-Neomonachus tropicalis,67,33
-Panthera leo leo,77,34
-Canis lupus monstrabilis,77,35
-Canis lupus fuscus,79,36
-Macropus greyi,80,37
-Panthera tigris sondaica,82,38
-Thylacinus cynocephalus,83,39
-Canis lupus mogollonensis,84,40
-Caloprymnus campestris,84,41
-Nesoryzomys indefessus,85,42
-Tympanuchus cupido cupido,87,43
-Nesoryzomys darwini,89,44
-Canis lupus alces,94,45
-Ursus arctos californicus,95,46
-Conuropsis carolinensis,101,47
-Ectopistes migratorius,105,48
-Canis lupus beothucus,108,49
-Equus ferus ferus,110,50
-Heteralocha acutirostris,112,51
-Canis lupus hodophilax,114,52
-Melanoplus spretus,117,53
-Lagorchestes leporides,129,54
-Canis lupus hattai,130,55
-Equus quagga quagga,136,56
-Cervus canadensis canadensis,139,57
-Ursus arctos crowtheri,140,58
-Camptorhynchus labradorius,141,59
-Dusicyon australis,143,60
-Potorous platyops,144,61
-Neovison macrodon,159,62
-Pinguinus impennis,167,63
-Tachygyia microlepis,192,64
-Alectroenas nitidissimus,193,65
-Aplonis mavornata,194,66
-Hippotragus leucophaeus,219,67
-Porphyrio albus,229,68
-Cyanoramphus ulietanus,242,69
-Prolagus sardus,245,70
-Prosobonia leucoptera,246,71
-Hydrodamalis gigas,251,72
-Aepyornis maximus,329,73
-Madagascar,357,74
-Chenonetta finschi,374,75
-Bos primigenius,392,76
-Megadyptes waitaha,469,77
-Palaeopropithecus,579,78
-Pachyornis elephantopus,619,79
-Pachyornis geranoides,619,80
-Pachyornis australis,619,81
-Euryapteryx curtus,1183,82
-Euryapteryx geranoides,1183,83
-Emeus crassus,619,84
-Anomalopteryx didiformis,619,85
-Dinornis novaezealandiae,619,86
-Dinornis struthoides,619,87
-Dinornis giganteus,619,88
-Dinornis robustus,619,89
-Hieraaetus moorei,619,90
-Nesophontes,659,91
-Thambetochen chauliodous,839,92
-Aegotheles novazelandiae,1023,93
-Vini sinotoi,1069,94
-Vini vidivici,1069,95
-Plesiorycteropus,1104,96
-Branta hylobadistes,1119,97
-Daubentonia robusta,1134,98
-Heteropsomys insulans,1288,99
-Pachylemur insignis,1289,100
-Puffinus olsoni,1334,101
-Alopochen sirabensis,1449,102
-Mesopropithecus pithecoides,1479,103
-Hadropithecus,1482,104
-Meiolania,1569,105
-Loxodonta africana pharaohensis,1719,106
-Mesopropithecus globiceps,1763,107
-Rhynochetos orarius,1819,108
-Caloenas canacorum,1819,109
-Porphyrio kukwiedei,1819,110
-Megapodius molistructor,1819,111
-Accipiter efficax,1819,112
-Apteribis,1919,113
-Coua primaeva,2049,114
-Elephas maximus asurus,2119,115
-Archaeolemur edwardsi,2129,116
-Archaeolemur majori,2129,117
-Xenothrix mcgregori,2214,118
-Archaeoindris fontoynonti,2360,119
-Crocidura balsamifera,2469,120
-Elasmodontomys obliquus,2476,121
-Microgale macpheei,2549,122
-Megapodius alimentum,2809,123
-Thylogale christenseni,3319,124
-Acratocnus odontrigonus,3399,125
-Sylviornis,3539,126
-Mammuthus primigenius,3719,127
-Antillothrix bernensis,519,128
-Megalocnus rodens,4259,129
-Nesotrochis,4259,130
-Neocnus comes,4260,131
-Ardea bennuides,4569,132
-Pelorovis antiquus,4784,133
-Myotragus balearicus,4854,134
-Dusicyon avus,4934,135
-Parocnus browni,5029,136
-Rallus eivissensis,6199,137
-Doedicurus clavicaudatus,6624,138
-Megaloceros giganteus,6885,139
-Dactylopsila kambuaya,6969,140
-Petauroides ayamaruensis,6969,141
-Praemegaceros cazioti ,7039,142
-Megatherium americanum,7389,143
-Antidorcas bondi,7639,144
-Siphonorhis daiquiri,7933,145
-Megalotragus priscus,8069,146
-Bubo insularis,8294,147
-Camelops,8309,148
-Hemiauchenia,8596,149
-Mylodon,8708,150
-Ochotona whartoni,8739,151
-Mammuthus columbi,8749,152
-Bison priscus,8929,153
-Scelidodon chiliensis,8979,154
-Smilodon populator ,9199,155
-Hippopotamus minor,9309,156
-Canis dirus,9469,157
-Mylohyus,9479,158
-Palaeoloxodon cypriotes,9489,159
-Sangamona,9509,160
-Megalonyx jeffersonii,9509,161
-Catonyx cuvieri,9649,162
-Nothrotheriops,9909,163
-Holmesina,9949,164
-Glossotherium,9949,165
-Tapirus veroensis,9949,166
-Palaeolama mirifica,9949,167
-Amerhippus,10259,168
-Glyptodon,10259,169
-Toxodon,10259,170
-Castoroides,10299,171
-Cervalces scotti,10299,172
-Martes nobilis,10439,173
-Panthera leo atrox,10439,174
-Elephas americanum,10464,175
-Hippidion,10754,176
-Oreamnos harringtoni,10939,177
-Bootherium bombifrons,11049,178
-Mammuthus exilis,11099,179
-Scelidotherium,11109,180
-Stegomastodon,11109,181
-Platygonus,11129,182
-Panthera onca mesembrina,11154,183
-Symbos,11169,184
-Bison antiquus,11199,185
-Capromeryx,11239,186
-Stockoceros,11399,187
-Equus conversidens,11399,188
-Eremotherium,11409,189
-Cynotherium sardous,11419,190
-Arctodus simus,11549,191
-Arctotherium,11669,192
-Euceratherium,11699,193
-Fratercula dowi,11959,194
-Cuvieronius,11969,195
+id,value,uid,name,class
+Melomys rubicol,0,1,Bramble Cay melomys,Mammalia
+Emoia nativitatis,2,2,Christmas Island forest skink,Reptilia
+Aegolius gradyi,5,3,Bermuda saw-whet owl,Aves
+Neofelis nebulosa brachyura,6,4,Formosan clouded leopard,Mammalia
+Chioninia coctei,6,5,Cape Verde giant skink,Reptilia
+Chelonoidis abingdonii,7,6,Pinta Island tortoise,Reptilia
+Lutra lutra whiteleyi,7,7,Japanese river otter,Mammalia
+Diceros bicornis longipes,8,8,Western black rhinoceros,Mammalia
+Puma concolor couguar,8,9,Eastern cougar,Mammalia
+Lipotes vexillifer,13,10,Baiji,Mammalia
+Capra pyrenaica pyrenaica,19,11,Pyrenean ibex,Mammalia
+Levuana irridescens,25,12,Levuana moth,Insecta
+Borikenophis sanctaecrucis,25,13,Saint Croix racer,Reptilia
+Ammodramus maritimus nigrescens,29,14,Dusky seaside sparrow,Aves
+Incilius periglenes,30,15,Golden toad,Amphibia
+Moho braccatus,32,16,Kauaʻi ʻōʻō,Aves
+Rheobatrachus,34,17,Northern gastric-brooding frog,Amphibia
+Heliaster solaris,35,18,24-rayed Sunstar,Asteroidea
+Bos sauveli,36,19,Kouprey,Mammalia
+Rheobatrachus,38,20,Southern gastric-brooding frog,Amphibia
+Epioblasma torulosa,38,21,Tubercled blossom,Bivalvia
+Panthera tigris sondaica,43,22,Javan tiger,Mammalia
+Zalophus japonicus,45,23,Japanese sea lion,Mammalia
+Panthera tigris tigris,49,24,Caspian tiger,Mammalia
+Struthio camelus syriacus,53,25,Arabian ostrich,Aves
+Epioblasma turgidula,54,26,Turgid blossom pearly mussel,Bivalvia
+Cryptonanus ignitus,57,27,Red-bellied gracile opossum,Mammalia
+Ursus arctos,55,28,Mexican grizzly bear,Mammalia
+Noturus trautmani,62,29,Scioto madtom,Actinopterygii
+Onychogalea lunata,63,30,Crescent nail-tail wallaby,Mammalia
+Campephilus imperialis,63,31,Imperial woodpecker,Aves
+Canis lupus bernardi,67,32,Bernard's wolf,Mammalia
+Neomonachus tropicalis,67,33,Caribbean monk seal,Mammalia
+Panthera leo leo,77,34,Barbary lion,Mammalia
+Canis lupus monstrabilis,77,35,Texas wolf,Mammalia
+Canis lupus fuscus,79,36,Cascade mountain wolf,Mammalia
+Macropus greyi,80,37,Toolache wallaby,Mammalia
+Panthera tigris sondaica,82,38,Bali tiger,Mammalia
+Thylacinus cynocephalus,83,39,Thylacine,Mammalia
+Canis lupus mogollonensis,84,40,Mogollon mountain wolf,Mammalia
+Caloprymnus campestris,84,41,Desert rat-kangaroo,Mammalia
+Nesoryzomys indefessus,85,42,indefatigable Galapagos mouse,Mammalia
+Tympanuchus cupido cupido,87,43,Heath hen,Aves
+Nesoryzomys darwini,89,44,Darwin's nesoryzomys,Mammalia
+Canis lupus alces,94,45,Kenai Peninsula wolf,Mammalia
+Ursus arctos californicus,95,46,California Grizzly Bear,Mammalia
+Conuropsis carolinensis,101,47,Carolina parakeet,Aves
+Ectopistes migratorius,105,48,Passenger pigeon,Aves
+Canis lupus beothucus,108,49,Newfoundland wolf,Mammalia
+Equus ferus ferus,110,50,Tarpan,Mammalia
+Heteralocha acutirostris,112,51,Huia,Aves
+Canis lupus hodophilax,114,52,Japanese wolf,Mammalia
+Melanoplus spretus,117,53,Rocky Mountain locust,Insecta
+Lagorchestes leporides,129,54,Eastern hare-wallaby,Mammalia
+Canis lupus hattai,130,55,Hokkaido wolf,Mammalia
+Equus quagga quagga,136,56,Quagga,Mammalia
+Cervus canadensis canadensis,139,57,Eastern Elk,Mammalia
+Ursus arctos crowtheri,140,58,Atlas bear,Mammalia
+Camptorhynchus labradorius,141,59,Labrador duck,Aves
+Dusicyon australis,143,60,Falkland Islands wolf,Mammalia
+Potorous platyops,144,61,Broad-faced potoroo,Mammalia
+Neovison macrodon,159,62,Sea mink,Mammalia
+Pinguinus impennis,167,63,Great auk,Aves
+Tachygyia microlepis,192,64,Tonga ground skink,Reptilia
+Alectroenas nitidissimus,193,65,Mauritius blue pigeon,Aves
+Aplonis mavornata,194,66,Mauke starling,Aves
+Hippotragus leucophaeus,219,67,Bluebuck,Mammalia
+Porphyrio albus,229,68,Lord Howe swamphen,Aves
+Cyanoramphus ulietanus,242,69,Society parakeet,Aves
+Prolagus sardus,245,70,Sardinian pika,Mammalia
+Prosobonia leucoptera,246,71,Tahiti sandpiper,Aves
+Hydrodamalis gigas,251,72,Steller's sea cow,Mammalia
+Aepyornis maximus,329,73,Elephant bird,Aves
+Madagascar,357,74,Dodo,Aves
+Chenonetta finschi,374,75,Finsch's duck,Aves
+Bos primigenius,392,76,Aurochs,Mammalia
+Megadyptes waitaha,469,77,Waitaha penguin,Aves
+Palaeopropithecus,579,78,Palaeopropithecus,Mammalia
+Pachyornis elephantopus,619,79,Heavy-footed moa,Aves
+Pachyornis geranoides,619,80,Stout-legged moa,Aves
+Pachyornis australis,619,81,Crested moa,Aves
+Euryapteryx curtus,1183,82,Little coastal moa,Aves
+Euryapteryx geranoides,1183,83,Mantell's moa,Aves
+Emeus crassus,619,84,Eastern moa,Aves
+Anomalopteryx didiformis,619,85,Bush moa,Aves
+Dinornis novaezealandiae,619,86,North Island giant moa,Aves
+Dinornis struthoides,619,87,Slender bush moa,Aves
+Dinornis giganteus,619,88,Giant moa,Aves
+Dinornis robustus,619,89,South Island giant moa,Aves
+Hieraaetus moorei,619,90,Haast's eagle,Aves
+Nesophontes,659,91,West Indies shrew,Mammalia
+Thambetochen chauliodous,839,92,Maui Nui large-billed moa-nalo,Aves
+Aegotheles novazelandiae,1023,93,New Zealand owlet-nightjar,Aves
+Vini sinotoi,1069,94,Sinoto's lorikeet,Aves
+Vini vidivici,1069,95,Conquered lorikeet,Aves
+Plesiorycteropus,1104,96,Malagasy aardvark,Mammalia
+Branta hylobadistes,1119,97,Nēnē-nui,Aves
+Daubentonia robusta,1134,98,Giant aye-aye,Mammalia
+Heteropsomys insulans,1288,99,Insular cave rat,Mammalia
+Pachylemur insignis,1289,100,Pachylemur,Mammalia
+Puffinus olsoni,1334,101,Lava shearwater,Mammalia
+Alopochen sirabensis,1449,102,Malagasy shelduck,Aves
+Mesopropithecus pithecoides,1479,103,Mesopropithecus pithecoides,Mammalia
+Hadropithecus,1482,104,Hadropithecus,Mammalia
+Meiolania,1569,105,Meiolania,Reptilia
+Loxodonta africana pharaohensis,1719,106,North African elephant,Mammalia
+Mesopropithecus globiceps,1763,107,Mesopropithecus globiceps,Mammalia
+Rhynochetos orarius,1819,108,Lowland kagu,Aves
+Caloenas canacorum,1819,109,Kanaka pigeon,Aves
+Porphyrio kukwiedei,1819,110,New Caledonian gallinule,Aves
+Megapodius molistructor,1819,111,Pile-builder megapode,Aves
+Accipiter efficax,1819,112,Powerful goshawk,Aves
+Apteribis,1919,113,Apteribis,Aves
+Coua primaeva,2049,114,Coua primaeva,Aves
+Elephas maximus asurus,2119,115,Syrian elephant,Mammalia
+Archaeolemur edwardsi,2129,116,Archaeolemur,Mammalia
+Archaeolemur majori,2129,117,Archaeolemur,Mammalia
+Xenothrix mcgregori,2214,118,Jamaican monkey,Mammalia
+Archaeoindris fontoynonti,2360,119,Archaeoindris,Mammalia
+Crocidura balsamifera,2469,120,Crocidura,Mammalia
+Elasmodontomys obliquus,2476,121,Plate-toothed giant hutia,Mammalia
+Microgale macpheei,2549,122,Microgale macpheei,Mammalia
+Megapodius alimentum,2809,123,Consumed scrubfowl,Aves
+Thylogale christenseni,3319,124,Pademelon,Mammalia
+Acratocnus odontrigonus,3399,125,Acratocnus,Mammalia
+Sylviornis,3539,126,giant flightless megapode,Aves
+Mammuthus primigenius,3719,127,Woolly mammoth,Mammalia
+Antillothrix bernensis,519,128,Hispaniola monkey,Mammalia
+Megalocnus rodens,4259,129,Megalocnus,Mammalia
+Nesotrochis,4259,130,Cuban cave rail,Aves
+Neocnus comes,4260,131,Neocnus,Mammalia
+Ardea bennuides,4569,132,Bennu heron,Aves
+Pelorovis antiquus,4784,133,North African buffalo,Mammalia
+Myotragus balearicus,4854,134,Balearic cave goat,Mammalia
+Dusicyon avus,4934,135,Antarctic wolf,Mammalia
+Parocnus browni,5029,136,Parocnus browni,Mammalia
+Rallus eivissensis,6199,137,Ibiza rail,Aves
+Doedicurus clavicaudatus,6624,138,Doedicurus,Mammalia
+Megaloceros giganteus,6885,139,Irish elk,Mammalia
+Dactylopsila kambuaya,6969,140,Dactylopsila kambuaya,Mammalia
+Petauroides ayamaruensis,6969,141,Petauroides ayamaruensis,Mammalia
+Praemegaceros cazioti ,7039,142,Sardinian giant deer,Mammalia
+Megatherium americanum,7389,143,Giant sloth,Mammalia
+Antidorcas bondi,7639,144,Antidorcas bondi,Mammalia
+Siphonorhis daiquiri,7933,145,Cuban pauraque,Aves
+Megalotragus priscus,8069,146,Megalotragus,Mammalia
+Bubo insularis,8294,147,Mediterranean brown fishing owl,Aves
+Camelops,8309,148,Camelops,Mammalia
+Hemiauchenia,8596,149,Hemiauchenia,Mammalia
+Mylodon,8708,150,Mylodon,Mammalia
+Ochotona whartoni,8739,151,Giant Pika,Mammalia
+Mammuthus columbi,8749,152,Columbian mammoth,Mammalia
+Bison priscus,8929,153,Steppe bison,Mammalia
+Scelidodon chiliensis,8979,154,Scelidodon,Mammalia
+Smilodon populator ,9199,155,Smilodon,Mammalia
+Hippopotamus minor,9309,156,Cyprus dwarf hippopotamus,Mammalia
+Canis dirus,9469,157,Dire wolf,Mammalia
+Mylohyus,9479,158,Mylohyus,Mammalia
+Palaeoloxodon cypriotes,9489,159,Cyprus dwarf elephant,Mammalia
+Sangamona,9509,160,Stilt-legged deer,Mammalia
+Megalonyx jeffersonii,9509,161,Megalonyx,Mammalia
+Catonyx cuvieri,9649,162,Catonyx,Mammalia
+Nothrotheriops,9909,163,Nothrotheriops,Mammalia
+Holmesina,9949,164,Holmesina,Mammalia
+Glossotherium,9949,165,Glossotherium,Mammalia
+Tapirus veroensis,9949,166,Tapir,Mammalia
+Palaeolama mirifica,9949,167,Palaeolama,Mammalia
+Amerhippus,10259,168,Amerhippus,Mammalia
+Glyptodon,10259,169,Glyptodon,Mammalia
+Toxodon,10259,170,Toxodon,Mammalia
+Castoroides,10299,171,Giant beaver,Mammalia
+Cervalces scotti,10299,172,Elk moose,Mammalia
+Martes nobilis,10439,173,Noble marten,Mammalia
+Panthera leo atrox,10439,174,American lion,Mammalia
+Elephas americanum,10464,175,Mastodon,Mammalia
+Hippidion,10754,176,Hippidion,Mammalia
+Oreamnos harringtoni,10939,177,Harrington's mountain goat,Mammalia
+Bootherium bombifrons,11049,178,Harlan's muskox,Mammalia
+Mammuthus exilis,11099,179,Pygmy mammoth,Mammalia
+Scelidotherium,11109,180,Scelidotherium,Mammalia
+Stegomastodon,11109,181,Stegomastodon,Mammalia
+Platygonus,11129,182,Platygonus,Mammalia
+Panthera onca mesembrina,11154,183,Panthera onca mesembrina,Mammalia
+Symbos,11169,184,Woodland musk ox,Mammalia
+Bison antiquus,11199,185,Ancient bison,Mammalia
+Capromeryx,11239,186,Capromeryx,Mammalia
+Stockoceros,11399,187,Stockoceros,Mammalia
+Equus conversidens,11399,188,Mexican horse,Mammalia
+Eremotherium,11409,189,Mexican horse,Mammalia
+Cynotherium sardous,11419,190,Sardinian dhole,Mammalia
+Arctodus simus,11549,191,Short-faced bear,Mammalia
+Arctotherium,11669,192,Arctotherium,Mammalia
+Euceratherium,11699,193,Shrub-ox,Mammalia
+Fratercula dowi,11959,194,Dow's puffin,Aves
+Cuvieronius,11969,195,Cuvieronius,Mammalia

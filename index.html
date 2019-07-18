@@ -4,6 +4,7 @@
 
 body {
 	font-family: sans-serif;
+  padding: 24px;
 }
 
 h1 {
@@ -31,25 +32,49 @@ p {
 }
 
 .cells :hover circle {
-  fill: red;
+  stroke: black;
+  stroke-width: 2px;
 }
 
-.tip {
-  position: absolute;
-  text-align: center;
-  padding: 8px;
-  font: 12px sans-serif;
-  background: lightsteelblue;
-  border: 0px;
-  border-radius: 8px;
-  pointer-events: none;
+/* Circle colors */
+
+.circle-Actinopterygii {
+  fill: #4E79A7;
+}
+
+.circle-Amphibia {
+  fill: #F28E2B;
+}
+
+.circle-Asteroidea {
+  fill: #E15759;
+}
+
+.circle-Aves {
+  fill: #76B7B2;
+}
+
+.circle-Bivalvia {
+  fill: #59A14F;
+}
+
+.circle-Insecta {
+  fill: #EDC948;
+}
+
+.circle-Mammalia {
+  fill: #B07AA1;
+}
+
+.circle-Reptilia {
+  fill: #FF9DA7;
 }
 
 </style>
 <body>
 	<h1>Animal Extinctions</h1>
-	<p>Since the End of the Last Ice Age</p>
-	<svg width="960" height="300" style="border: 1px solid red;"></svg>	
+	<p>Over the Last 12,000 Years</p>
+	<svg width="760" height="340"></svg>	
 </body>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -81,7 +106,7 @@ d3.csv("data.csv", type, function(error, data) {
   var simulation = d3.forceSimulation(data)
       .force("x", d3.forceX(function(d) { return x(d.value); }).strength(8))
       .force("y", d3.forceY(height / 2.5))
-      .force("collide", d3.forceCollide(4))
+      .force("collide", d3.forceCollide(6))
       .stop();
 
   for (var i = 0; i < 220; ++i) simulation.tick();
@@ -97,30 +122,20 @@ d3.csv("data.csv", type, function(error, data) {
         .extent([[-margin.left, -margin.top], [width + margin.right, height + margin.top]])
         .x(function(d) { return d.x; })
         .y(function(d) { return d.y; })
-      .polygons(data)).enter().append("g").style("stroke","blue");
+      .polygons(data)).enter().append("g");
 
   cell.append("circle")
-      .attr("r", 3)
-      .attr("class", function(d) { return "circle-hover-" + d.data.uid; })
+      .attr("r", 5)
+      .attr("class", function(d) { return "circle-" + d.data.uid; })
+      .attr("class", function(d) { return "circle-" + d.data.class; })
       .attr("cx", function(d) { return d.data.x; })
       .attr("cy", function(d) { return d.data.y; });      
 
   cell.append("path")
       .attr("d", function(d) { return "M" + d.join("L") + "Z"; }) 
-     //  .on("mouseover", function(d) {
-     //   tip.transition()
-     //     .duration(100)
-     //     .style("opacity", .9);
-     //   tip.html(d.data.id + "<br/>" + d.data.value)
-     //   })
-     // .on("mouseout", function(d) {
-     //   tip.transition()
-     //     .duration(200)
-     //     .style("opacity", 0);
-     //   });
 
   cell.append("title")
-      .text(function(d) { return d.data.id + "\n" + formatValue(d.data.value); });
+      .text(function(d) { return d.data.name + "\n" + d.data.class + "\n" + formatValue(d.data.value) + " Years Ago";});
 });
 
 function type(d) {
