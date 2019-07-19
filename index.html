@@ -70,11 +70,23 @@ p {
   fill: #FF9DA7;
 }
 
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 8px;
+  font: 12px sans-serif;
+  background: white;
+  border: 1px solid #ededed;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
 </style>
 <body>
 	<h1>Animal Extinctions</h1>
 	<p>Over the Last 12,000 Years</p>
-	<svg width="760" height="340"></svg>	
+	<svg width="760" height="380"></svg>	
 </body>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -87,8 +99,8 @@ var svg = d3.select("svg"),
 
 var formatValue = d3.format(",d");
 
-var tip = d3.select("body").append("tip")
-    .attr("class", "tip")
+var div = d3.select("body").append("div")
+    .attr("class", "tooltip")
     .style("opacity", 0);
 
 var x = d3.scaleLinear()
@@ -101,12 +113,10 @@ var g = svg.append("g")
 d3.csv("data.csv", type, function(error, data) {
   if (error) throw error;
 
-  x.domain(d3.extent(data, function(d) { return d.value; }));
-
   var simulation = d3.forceSimulation(data)
       .force("x", d3.forceX(function(d) { return x(d.value); }).strength(8))
       .force("y", d3.forceY(height / 2.5))
-      .force("collide", d3.forceCollide(6))
+      .force("collide", d3.forceCollide(7))
       .stop();
 
   for (var i = 0; i < 220; ++i) simulation.tick();
@@ -125,17 +135,24 @@ d3.csv("data.csv", type, function(error, data) {
       .polygons(data)).enter().append("g");
 
   cell.append("circle")
-      .attr("r", 5)
+      .attr("r", 6)
       .attr("class", function(d) { return "circle-" + d.data.uid; })
       .attr("class", function(d) { return "circle-" + d.data.class; })
       .attr("cx", function(d) { return d.data.x; })
-      .attr("cy", function(d) { return d.data.y; });      
-
-  cell.append("path")
-      .attr("d", function(d) { return "M" + d.join("L") + "Z"; }) 
-
-  cell.append("title")
-      .text(function(d) { return d.data.name + "\n" + d.data.class + "\n" + formatValue(d.data.value) + " Years Ago";});
+      .attr("cy", function(d) { return d.data.y; })
+      .on("mouseover", function(d) {
+       div.transition()
+         .duration(200)
+         .style("opacity", 1);
+       div.html("<strong>" + d.data.name + "</strong>" + "<br/>" + d.data.class + "<br/>" + d.data.value + " years ago")
+         .style("left", (d3.event.pageX + 16) + "px")
+         .style("top", (d3.event.pageY - 20) + "px");
+       })
+      .on("mouseout", function(d) {
+       div.transition()
+         .duration(500)
+         .style("opacity", 0);
+       });
 });
 
 function type(d) {
