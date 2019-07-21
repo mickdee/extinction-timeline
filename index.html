@@ -34,6 +34,7 @@ p {
 .cells :hover circle {
   stroke: black;
   stroke-width: 2px;
+  cursor: pointer;
 }
 
 /* Circle colors */
@@ -82,6 +83,38 @@ div.tooltip {
   pointer-events: none;
 }
 
+circle.active {
+  stroke: black;
+  stroke-width: 2px;
+}
+
+div.infopanel {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+div.portrait {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 16px;
+  background-color: #ededed;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.portraitimg {
+  max-height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.infopaneldata {
+  display: inline-block;
+}
+
 </style>
 <body>
 	<h1>Animal Extinctions</h1>
@@ -95,12 +128,17 @@ div.tooltip {
 var svg = d3.select("svg"),
     margin = {top: 40, right: 40, bottom: 40, left: 40},
     width = svg.attr("width") - margin.left - margin.right,
-    height = svg.attr("height") - margin.top - margin.bottom;
+    height = svg.attr("height") - margin.top - margin.bottom,
+    active;
 
 var formatValue = d3.format(",d");
 
-var div = d3.select("body").append("div")
+var divtooltip = d3.select("body").append("div")
     .attr("class", "tooltip")
+    .style("opacity", 0);
+
+var divinfopanel = d3.select("body").append("div")
+    .attr("class", "infopanel")
     .style("opacity", 0);
 
 var x = d3.scaleLinear()
@@ -141,18 +179,29 @@ d3.csv("data.csv", type, function(error, data) {
       .attr("cx", function(d) { return d.data.x; })
       .attr("cy", function(d) { return d.data.y; })
       .on("mouseover", function(d) {
-       div.transition()
+       divtooltip.transition()
          .duration(200)
          .style("opacity", 1);
-       div.html("<strong>" + d.data.name + "</strong>" + "<br/>" + d.data.class + "<br/>" + d.data.value + " years ago")
+       divtooltip.html("<strong>" + d.data.name + "</strong>" + "<br/>" + d.data.class + "<br/>" + d.data.value + " years ago")
          .style("left", (d3.event.pageX + 16) + "px")
          .style("top", (d3.event.pageY - 20) + "px");
        })
       .on("mouseout", function(d) {
-       div.transition()
+       divtooltip.transition()
          .duration(500)
          .style("opacity", 0);
-       });
+       })
+      .on("click", function(d) {
+        
+        if (active === d) return reset();
+        g.selectAll(".active").classed("active", false);
+        d3.select(this).classed("active", active = d);
+
+        divinfopanel.transition()
+          .duration(200)
+          .style("opacity", 1)
+        divinfopanel.html("<div class='portrait'>" + "<img class='portraitimg' src='" + d.data.img + "'>" + "</div>" + "<div class='infopaneldata'>" + "<strong>" + d.data.name + "</strong>" + "<br/>" + d.data.class + "<br/>" + d.data.value + " years ago" + "</div>")
+      });
 });
 
 function type(d) {
