@@ -7,8 +7,10 @@ body {
   padding: 24px;
 }
 
-h1 {
-	margin-bottom: 0;
+h1, h2 {
+	margin-top: 0;
+  margin-bottom: 0;
+  text-transform: capitalize;
 }
 
 p {
@@ -37,38 +39,64 @@ p {
   cursor: pointer;
 }
 
+.tooltip-dot {
+  display: inline-block;
+  margin-right: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #efefef;
+}
+
+.legend-dot {
+  display: inline-block;
+  margin-right: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #efefef;
+}
+
 /* Circle colors */
 
 .circle-Actinopterygii {
   fill: #4E79A7;
+  background-color: #4E79A7;
 }
 
 .circle-Amphibia {
   fill: #F28E2B;
+  background-color: #F28E2B;
 }
 
 .circle-Asteroidea {
   fill: #E15759;
+  background-color: #E15759;
 }
 
 .circle-Aves {
   fill: #76B7B2;
+  background-color: #76B7B2;
 }
 
 .circle-Bivalvia {
   fill: #59A14F;
+  background-color: #59A14F;
 }
 
 .circle-Insecta {
   fill: #EDC948;
+  background-color: #EDC948;
 }
 
 .circle-Mammalia {
   fill: #B07AA1;
+  background-color: #B07AA1;
 }
 
 .circle-Reptilia {
-  fill: #FF9DA7;
+  fill: #B6992D;
+  background-color: #B6992D;
 }
 
 div.tooltip {
@@ -81,6 +109,7 @@ div.tooltip {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 8px;
   pointer-events: none;
+  text-transform: capitalize;
 }
 
 circle.active {
@@ -91,12 +120,14 @@ circle.active {
 div.infopanel {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: top;
+  margin-top: 16px;
+  margin-left: 32px;
 }
 
 div.portrait {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin-right: 16px;
   background-color: #ededed;
@@ -105,23 +136,38 @@ div.portrait {
 }
 
 .portraitimg {
-  max-height: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
+img.wide {
+    height: 100%;
+    object-fit:cover;
+}
+img.tall {
+    width: 100%;
+    object-fit:cover;
+}​
+
 div.infopaneldata {
   display: inline-block;
 }
 
+.mbm {
+  margin-bottom: 16px;
+}
+
 </style>
 <body>
-	<h1>Animal Extinctions</h1>
-	<p>Over the Last 12,000 Years</p>
-	<svg width="760" height="380"></svg>	
+	<h1>Extinct Animals</h1>
+	<p>Recent Extinctions of the Last 12,000 Years</p>
+	<svg width="760" height="373"></svg>	
 </body>
-
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
@@ -152,7 +198,7 @@ d3.csv("data.csv", type, function(error, data) {
   if (error) throw error;
 
   var simulation = d3.forceSimulation(data)
-      .force("x", d3.forceX(function(d) { return x(d.value); }).strength(8))
+      .force("x", d3.forceX(function(d) { return x(d.value); }).strength(5))
       .force("y", d3.forceY(height / 2.5))
       .force("collide", d3.forceCollide(7))
       .stop();
@@ -174,15 +220,14 @@ d3.csv("data.csv", type, function(error, data) {
 
   cell.append("circle")
       .attr("r", 6)
-      .attr("class", function(d) { return "circle-" + d.data.uid; })
-      .attr("class", function(d) { return "circle-" + d.data.class; })
+      .attr("class", function(d) { return "circle-" + d.data.class + " circle-" + d.data.uid; })
       .attr("cx", function(d) { return d.data.x; })
       .attr("cy", function(d) { return d.data.y; })
       .on("mouseover", function(d) {
        divtooltip.transition()
          .duration(200)
          .style("opacity", 1);
-       divtooltip.html("<strong>" + d.data.name + "</strong>" + "<br/>" + d.data.class + "<br/>" + d.data.value + " years ago")
+       divtooltip.html("<strong>" + d.data.name + "</strong>" + "<br/>" + "<span class='tooltip-dot circle-" + d.data.class + "'>" + "</span>" + d.data.class + "<br/>" + d.data.value + " years ago")
          .style("left", (d3.event.pageX + 16) + "px")
          .style("top", (d3.event.pageY - 20) + "px");
        })
@@ -200,7 +245,7 @@ d3.csv("data.csv", type, function(error, data) {
         divinfopanel.transition()
           .duration(200)
           .style("opacity", 1)
-        divinfopanel.html("<div class='portrait'>" + "<img class='portraitimg' src='" + d.data.img + "'>" + "</div>" + "<div class='infopaneldata'>" + "<strong>" + d.data.name + "</strong>" + "<br/>" + d.data.class + "<br/>" + d.data.value + " years ago" + "</div>")
+        divinfopanel.html("<div class='portrait'>" + "<img class='portraitimg " + d.data.imgclass + "' src='" + d.data.img + "'>" + "</div>" + "<div class='infopaneldata'>" + "<h2>" + d.data.name + "</h2>" + "<div class='mbm'>" + "<span class='legend-dot circle-" + d.data.class + "'>" + "</span>" + d.data.class + "</div>" + "<div class='mbm'>" + "<strong>Scientific Name: </strong>" + "<br/>" + d.data.id + "</div>" + "<div class='mbm'>" + "<strong>Estimated year extinct: </strong>" + "<br/>" + d.data.yearextinct + " (" + d.data.value + " years ago)" + "</div>" + "<strong>Learn More:</strong>" + "<br/>" + "<a href='" + d.data.wikipedia + "' target='blank'>Wikipedia</a>" + "</div>")
       });
 });
 
