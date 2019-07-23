@@ -99,6 +99,46 @@ p {
   background-color: #B6992D;
 }
 
+.icon-Actinopterygii {
+  background-image: url("icons/actinopterygii.svg");
+  background-size: 50px 50px;
+}
+
+.icon-Amphibia {
+  background-image: url("icons/amphibia.svg");
+  background-size: 50px 50px;
+}
+
+.icon-Asteroidea {
+  background-image: url("icons/asteroidea.svg");
+  background-size: 50px 50px;
+}
+
+.icon-Aves {
+  background-image: url("icons/aves.svg");
+  background-size: 50px 50px;
+}
+
+.icon-Bivalvia {
+  background-image: url("icons/bivalvia.svg");
+  background-size: 50px 50px;
+}
+
+.icon-Insecta {
+  background-image: url("icons/insecta.svg");
+  background-size: 50px 50px;
+}
+
+.icon-Mammalia {
+  background-image: url("icons/mammalia.svg");
+  background-size: 50px 50px;
+}
+
+.icon-Reptilia {
+  background-image: url("icons/reptilia.svg");
+  background-size: 50px 50px;
+}
+
 div.tooltip {
   position: absolute;
   text-align: center;
@@ -131,6 +171,8 @@ div.portrait {
   border-radius: 50%;
   margin-right: 16px;
   background-color: #ededed;
+  background-position: center;
+  background-repeat: no-repeat;
   display: inline-block;
   overflow: hidden;
 }
@@ -245,7 +287,7 @@ d3.csv("data.csv", type, function(error, data) {
         divinfopanel.transition()
           .duration(200)
           .style("opacity", 1)
-        divinfopanel.html("<div class='portrait'>" + "<img class='portraitimg " + d.data.imgclass + "' src='" + d.data.img + "'>" + "</div>" + "<div class='infopaneldata'>" + "<h2>" + d.data.name + "</h2>" + "<div class='mbm'>" + "<span class='legend-dot circle-" + d.data.class + "'>" + "</span>" + d.data.class + "</div>" + "<div class='mbm'>" + "<strong>Scientific Name: </strong>" + "<br/>" + d.data.id + "</div>" + "<div class='mbm'>" + "<strong>Estimated year extinct: </strong>" + "<br/>" + d.data.yearextinct + " (" + d.data.value + " years ago)" + "</div>" + "<strong>Learn More:</strong>" + "<br/>" + "<a href='" + d.data.wikipedia + "' target='blank'>Wikipedia</a>" + "</div>")
+        divinfopanel.html("<div class='portrait" + " icon-" + d.data.class + "'>" + "<img class='portraitimg " + d.data.imgclass + "' src='" + d.data.img + "'>" + "</div>" + "<div class='infopaneldata'>" + "<h2>" + d.data.name + "</h2>" + "<div class='mbm'>" + "<span class='legend-dot circle-" + d.data.class + "'>" + "</span>" + d.data.class + "</div>" + "<div class='mbm'>" + "<strong>Scientific Name: </strong>" + "<br/>" + d.data.id + "</div>" + "<div class='mbm'>" + "<strong>Estimated year extinct: </strong>" + "<br/>" + d.data.yearextinct + " (" + d.data.value + " years ago)" + "</div>" + "<strong>Learn More:</strong>" + "<br/>" + "<a href='" + d.data.wikipedia + "' target='blank'>Wikipedia</a>" + "</div>")
       });
 });
 
