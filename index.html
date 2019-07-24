@@ -4,7 +4,18 @@
 
 body {
 	font-family: sans-serif;
+  padding: 32px;
+  background-color: #efefef;
+}
+
+.body-container {
+  max-width: 900px;
   padding: 24px;
+  margin: auto;
+  background-color: white;
+  box-shadow: 1px 5px 14px -4px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 1px 5px 14px -4px rgba(0,0,0,0.3);
+  -moz-box-shadow: 1px 5px 14px -4px rgba(0,0,0,0.3);
 }
 
 h1, h2 {
@@ -13,8 +24,8 @@ h1, h2 {
   text-transform: capitalize;
 }
 
-p {
-	margin-top: 8px;
+p.subtitle {
+	margin-top: 2px;
 }
 
 .axis path,
@@ -99,6 +110,8 @@ p {
   background-color: #B6992D;
 }
 
+/* Animal icons */
+
 .icon-Actinopterygii {
   background-image: url("icons/actinopterygii.svg");
   background-size: 50px 50px;
@@ -137,6 +150,10 @@ p {
 .icon-Reptilia {
   background-image: url("icons/reptilia.svg");
   background-size: 50px 50px;
+}
+
+div.container {
+  display: flex;
 }
 
 div.tooltip {
@@ -179,8 +196,7 @@ div.portrait {
 
 .portraitimg {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 img.wide {
@@ -196,20 +212,66 @@ div.infopaneldata {
   display: inline-block;
 }
 
+.infopanel-copy {
+  font-size: 12px;
+}
+
 .mbm {
   margin-bottom: 16px;
 }
 
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+li span {
+  margin-top: 2px;
+}
+
+.resources {
+  margin-top: 40px;
+  font-size: 12px;
+}
+
+.resources ul {
+  margin-top: 0;
+  padding-left: 0;
+}
+
 </style>
 <body>
-	<h1>Extinct Animals</h1>
-	<p>Recent Extinctions of the Last 12,000 Years</p>
-	<svg width="760" height="373"></svg>	
+  <div class="body-container">
+  	<h1>Animal Extinctions</h1>
+  	<p class="subtitle">of the Last 12,000 Years</p>
+  	<div class="container">
+      <svg width="760" height="360"></svg>
+      <div>
+        <ul>
+          <li><span class="legend-dot circle-Actinopterygii"></span>Actinopterygii</li>
+          <li><span class="legend-dot circle-Amphibia"></span>Amphibia</li>
+          <li><span class="legend-dot circle-Asteroidea"></span>Asteroidea</li>
+          <li><span class="legend-dot circle-Aves"></span>Aves</li>
+          <li><span class="legend-dot circle-Bivalvia"></span>Bivalvia</li>
+          <li><span class="legend-dot circle-Insecta"></span>Insecta</li>
+          <li><span class="legend-dot circle-Mammalia"></span>Mammalia</li>
+          <li><span class="legend-dot circle-Reptilia"></span>Reptilia</li>
+        </ul>
+      </div>
+    </div>
+    <div class="infopanel-container"></div>
+    <div class="resources">
+      <strong>Resources</strong>
+      <ul>
+       <li><a href="https://en.wikipedia.org/wiki/Timeline_of_extinctions_in_the_Holocene" target="blank">Timeline of extinctions in the Holocene</a></li> 
+      </ul>      
+    </div>
+  </div>
 </body>
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
@@ -225,7 +287,7 @@ var divtooltip = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
-var divinfopanel = d3.select("body").append("div")
+var divinfopanel = d3.select(".infopanel-container").append("div")
     .attr("class", "infopanel")
     .style("opacity", 0);
 
@@ -240,7 +302,7 @@ d3.csv("data.csv", type, function(error, data) {
   if (error) throw error;
 
   var simulation = d3.forceSimulation(data)
-      .force("x", d3.forceX(function(d) { return x(d.value); }).strength(5))
+      .force("x", d3.forceX(function(d) { return x(d.yearsago); }).strength(5))
       .force("y", d3.forceY(height / 2.5))
       .force("collide", d3.forceCollide(7))
       .stop();
@@ -269,7 +331,7 @@ d3.csv("data.csv", type, function(error, data) {
        divtooltip.transition()
          .duration(200)
          .style("opacity", 1);
-       divtooltip.html("<strong>" + d.data.name + "</strong>" + "<br/>" + "<span class='tooltip-dot circle-" + d.data.class + "'>" + "</span>" + d.data.class + "<br/>" + d.data.value + " years ago")
+       divtooltip.html("<strong>" + d.data.name + "</strong>" + "<br/>" + "<span class='tooltip-dot circle-" + d.data.class + "'>" + "</span>" + d.data.class + "<br/>" + d.data.yearsago + " years ago")
          .style("left", (d3.event.pageX + 16) + "px")
          .style("top", (d3.event.pageY - 20) + "px");
        })
@@ -287,13 +349,13 @@ d3.csv("data.csv", type, function(error, data) {
         divinfopanel.transition()
           .duration(200)
           .style("opacity", 1)
-        divinfopanel.html("<div class='portrait" + " icon-" + d.data.class + "'>" + "<img class='portraitimg " + d.data.imgclass + "' src='" + d.data.img + "'>" + "</div>" + "<div class='infopaneldata'>" + "<h2>" + d.data.name + "</h2>" + "<div class='mbm'>" + "<span class='legend-dot circle-" + d.data.class + "'>" + "</span>" + d.data.class + "</div>" + "<div class='mbm'>" + "<strong>Scientific Name: </strong>" + "<br/>" + d.data.id + "</div>" + "<div class='mbm'>" + "<strong>Estimated year extinct: </strong>" + "<br/>" + d.data.yearextinct + " (" + d.data.value + " years ago)" + "</div>" + "<strong>Learn More:</strong>" + "<br/>" + "<a href='" + d.data.wikipedia + "' target='blank'>Wikipedia</a>" + "</div>")
+        divinfopanel.html("<div class='portrait" + " icon-" + d.data.class + "'>" + "<img class='portraitimg " + d.data.imgclass + "' src='" + d.data.img + "'>" + "</div>" + "<div class='infopaneldata'>" + "<h2>" + d.data.name + "</h2>" + "<div class='infopanel-copy'>" + "<div class='mbm'>" + "<span class='legend-dot circle-" + d.data.class + "'>" + "</span>" + d.data.class + "</div>" + "<div class='mbm'>" + "<strong>Scientific Name: </strong>" + "<br/>" + d.data.id + "</div>" + "<div class='mbm'>" + "<strong>Estimated year extinct: </strong>" + "<br/>" + d.data.yearextinct + " (" + d.data.yearsago + " years ago)" + "</div>" + "<strong>Learn More:</strong>" + "<br/>" + "<a href='" + d.data.wikipedia + "' target='blank'>Wikipedia</a>" + "</div>" + "</div>" )
       });
 });
 
 function type(d) {
-  if (!d.value) return;
-  d.value = +d.value;
+  if (!d.yearsago) return;
+  d.yearsago = +d.yearsago;
   return d;
 }
 
