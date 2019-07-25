@@ -9,11 +9,14 @@
       of the Last 12,000 Years</h1>
     </div>
     <div class="text-block-center">
-      <p>The last 12,000 years span what geologists refer to as the Holocene epoch, a time of relative climate stability that began with the receding of great ice sheets covering much of the northern hemisphere -- and also the spread of homo sapiens to continents and isolated islands around much of the planet.</p>
-      <p>While many causes lead to the extinction of animals in the Holocene, evidence shows human activity was often a direct contribtor.</p>
+      <!-- <p>The last 12,000 years span what geologists refer to as the Holocene epoch, a time of relative climate stability that began with the receding of great ice sheets covering much of the northern hemisphere as well as the spread of homo sapiens throughout the Americas, many isolated islands, and other areas formerly covered in glacial ice.</p> -->
+      <p>The Earth of 12,000 years ago — practically yesterday in geologic terms — was home to animals that seem ancient and alien, as though they belonged more to the age of dinosaurs than to our own: <a href="https://en.wikipedia.org/wiki/Moa" target="blank">Flightless birds that were twelve feet tall</a>, <a href="https://en.wikipedia.org/wiki/Megatherium" target="blank">sloths the size of elephants</a>, <a href="https://en.wikipedia.org/wiki/Doedicurus" target="blank">a spike-tailed relative of the armadillo that weighed as much as a Volkswagen</a>, and <a href="https://en.wikipedia.org/wiki/Irish_elk#Size_of_antlers" target="blank">giant deer with antlers spanning nearly nine feet</a> are just a few of the creatures that recently roamed the planet.</p>
+      <p>While many factors lead to the extinction of animals during this period, known by Earth scientists as the Holocene epoch, evidence shows that human activity was often a direct contributor. More recently, the burning of fossil fuels, deforestation, ocean acidification and other forms of habitat alteration on a planetary scale have prompted the popularization of a name for a new epoch shaped by the habits of humanity — the <a href="https://www.smithsonianmag.com/science-nature/what-is-the-anthropocene-and-are-we-in-it-164801414/" target='blank'>Anthropocene</a>.</p>
     </div>
   	<div class="container">
-      <svg width="760" height="360"></svg>
+      <div class="viz-container">
+        <svg width="760" height="360"></svg>
+      </div> 
       <div class="legend-container">
         <ul>
           <li><span class="legend-dot circle-Actinopterygii"></span>Actinopterygii</li>
@@ -38,6 +41,15 @@
 </body>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
+
+//   var aspect = width / height,
+//     chart = d3.select('svg');
+// d3.select(window)
+//   .on("resize", function() {
+//     var targetWidth = chart.node().getBoundingClientRect().width;
+//     chart.attr("width", targetWidth);
+//     chart.attr("height", targetWidth / aspect);
+//   });
 
 var svg = d3.select("svg"),
     margin = {top: 40, right: 40, bottom: 40, left: 40},

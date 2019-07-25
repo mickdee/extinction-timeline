@@ -5,6 +5,10 @@ body {
   font-family: 'Roboto Slab', serif;
 }
 
+.viz-container {
+  overflow-x: scroll;
+}
+
 .body-container {
   max-width: 900px;
   padding: 32px;
@@ -25,7 +29,7 @@ body {
 
 .text-block-center p {
   max-width: 640px;
-  line-height: 24px;
+  line-height: 26px;
   margin: auto;
   margin-bottom: 16px;
 }
@@ -235,7 +239,7 @@ div.infopaneldata {
 }
 
 .infopanel-copy {
-  font-size: 12px;
+  
 }
 
 .mbm {
