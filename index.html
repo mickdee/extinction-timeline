@@ -12,9 +12,9 @@
       <p>The Earth of 12,000 years ago (practically yesterday in geologic terms) was home to animals that appear ancient and alien, as though they belonged more to the age of dinosaurs than to our own: <a href="https://en.wikipedia.org/wiki/Moa" target="blank">Flightless birds that were twelve feet tall</a>, <a href="https://en.wikipedia.org/wiki/Megatherium" target="blank">sloths the size of elephants</a>, <a href="https://en.wikipedia.org/wiki/Doedicurus" target="blank">a spike-tailed relative of the armadillo that weighed as much as a Volkswagen</a>, and <a href="https://en.wikipedia.org/wiki/Irish_elk#Size_of_antlers" target="blank">giant deer with antlers spanning nearly nine feet</a> were just a few of the creatures that recently roamed the planet.</p>
       <p>While many factors lead to the extinction of animals during this period, known by Earth scientists as the Holocene epoch, evidence shows that human activity was often a direct contributor. More recently, the burning of fossil fuels, deforestation, ocean acidification and other forms of habitat alteration on a planetary scale have prompted the popularization of a name for a new epoch shaped by the habits of humanity — the <a href="https://www.smithsonianmag.com/science-nature/what-is-the-anthropocene-and-are-we-in-it-164801414/" target='blank'>Anthropocene</a>.</p>
     </div>
-  	<div class="container">
+  	<div class="viz-and-legend-container">
       <div class="viz-container">
-        <svg width="760" height="360"></svg>
+        <svg width="750" height="450"></svg>
       </div> 
       <div class="legend-container">
         <ul>
@@ -34,6 +34,7 @@
       <strong>Resources</strong>
       <ul>
        <li><a href="https://en.wikipedia.org/wiki/Timeline_of_extinctions_in_the_Holocene" target="blank">Timeline of extinctions in the Holocene</a></li> 
+       <li><a href="https://en.wikipedia.org/wiki/List_of_North_American_animals_extinct_in_the_Holocene" target="blank">List of North American Animals Extinct in the Holocene</a></li>
       </ul>      
     </div>
   </div>
@@ -77,9 +78,9 @@ d3.csv("data.csv", type, function(error, data) {
   if (error) throw error;
 
   var simulation = d3.forceSimulation(data)
-      .force("x", d3.forceX(function(d) { return x(d.yearsago); }).strength(5))
-      .force("y", d3.forceY(height / 2.5))
-      .force("collide", d3.forceCollide(7))
+      .force("x", d3.forceX(function(d) { return x(d.yearsago); }).strength(8)) //the vertical spread of the dots -- lower number is narrower
+      .force("y", d3.forceY(height / 2.2)) //a lower number moved the whole simulation down, higher moves it up
+      .force("collide", d3.forceCollide(7.2)) //the collision spread of the dots - lower is tighter
       .stop();
 
   for (var i = 0; i < 220; ++i) simulation.tick();

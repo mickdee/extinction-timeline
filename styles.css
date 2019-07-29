@@ -5,18 +5,42 @@ body {
   font-family: 'Roboto Slab', serif;
 }
 
-.viz-container {
-  overflow-x: scroll;
-}
-
 .body-container {
-  max-width: 900px;
+  max-width: 980px;
   padding: 32px;
   margin: auto;
   background-color: white;
   box-shadow: 1px 5px 14px -4px rgba(0,0,0,0.3);
   -webkit-box-shadow: 1px 5px 14px -4px rgba(0,0,0,0.3);
   -moz-box-shadow: 1px 5px 14px -4px rgba(0,0,0,0.3);
+}
+
+.viz-and-legend-container {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.viz-container {
+  overflow-x: scroll;
+}
+
+.legend-container {
+  width: 100px;
+  min-width: 100px;
+}
+
+.legend-container ul {
+  padding-left: 0px;
+}
+
+.legend-dot {
+  display: inline-block;
+  margin-right: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #efefef;
 }
 
 .title-container {
@@ -71,25 +95,6 @@ p.subtitle {
   margin-right: 4px;
   width: 8px;
   height: 8px;
-  border-radius: 50%;
-  background-color: #efefef;
-}
-
-.legend-container {
-  width: 100px;
-  min-width: 100px;
-  padding: 24px;
-}
-
-.legend-container ul {
-  padding-left: 0px;
-}
-
-.legend-dot {
-  display: inline-block;
-  margin-right: 4px;
-  width: 12px;
-  height: 12px;
   border-radius: 50%;
   background-color: #efefef;
 }
@@ -178,10 +183,6 @@ p.subtitle {
   background-size: 50px 50px;
 }
 
-div.container {
-  display: flex;
-}
-
 div.tooltip {
   position: absolute;
   text-align: center;
@@ -267,4 +268,8 @@ li span {
 .resources ul {
   margin: 0;
   padding-left: 0;
+}
+
+.debug {
+  border: 1px solid red;
 }
