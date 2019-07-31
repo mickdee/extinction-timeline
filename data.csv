@@ -104,7 +104,7 @@ Mesopropithecus globiceps,Mesopropithecus globiceps,1763,256,Mammalia,Primates,P
 Rhynochetos orarius,Lowland kagu,1819,200,Aves,Eurypygiformes,Rhynochetidae,New Caledonia,https://en.wikipedia.org/wiki/Lowland_kagu,,,
 Caloenas canacorum,Kanaka pigeon,1819,200,Aves,Columbiformes,Columbidae,New Caledonia,https://en.wikipedia.org/wiki/Kanaka_pigeon,,,
 Porphyrio kukwiedei,New Caledonian gallinule,1819,200,Aves,Gruiformes,Rallidae,New Caledonia,https://en.wikipedia.org/wiki/New_Caledonian_gallinule,,,
-Megapodius molistructor,Pile-builder megapode,1819,200,Aves,Galliformes,Megapodiidae,New Caledonia,https://en.wikipedia.org/wiki/Pile-builder_megapode,,http://animal.memozee.com/ArchOLD-6/1138883536-m.jpg,wide
+Megapodius molistructor,Pile-builder megapode,1819,200,Aves,Galliformes,Megapodiidae,New Caledonia,https://en.wikipedia.org/wiki/Pile-builder_megapode,,,
 Accipiter efficax,Powerful goshawk,1819,200,Aves,Accipitriformes,Accipitridae,New Caledonia,https://en.wikipedia.org/wiki/Powerful_goshawk,,,
 Apteribis,Apteribis,1919,100,Aves,Pelecaniformes,Threskiornithidae,Hawaii,https://en.wikipedia.org/wiki/Apteribis,,https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Apteribis_sp._%285212794163%29.jpg/440px-Apteribis_sp._%285212794163%29.jpg,tall
 Coua primaeva,Coua primaeva,2049,-30,Aves,Cuculiformes,Cuculidae,Madagascar,https://en.wikipedia.org/wiki/Coua,,,
@@ -303,3 +303,10 @@ Tyto pollens,Andros Island barn owl,519,1500,Aves,Strigiformes,Tytonidae,Bahamas
 Colaptes oceanicus,Bermuda flicker,319,1700,Aves,Piciformes,Picidae,Bermuda,https://en.wikipedia.org/wiki/Bermuda_flicker,,,
 Nyctanassa carcinocatactes,Bermuda night heron,319,1700,Aves,Pelecaniformes,Ardeidae,Bermuda,https://en.wikipedia.org/wiki/Bermuda_night_heron,,,
 Bermuteo avivorus,Bermuda hawk,416,1603,Aves,Accipitriformes,Accipitridae,Bermuda,https://en.wikipedia.org/wiki/Bermuda_hawk,,,
+Martinique curly-tailed lizard,Martinique curly-tailed lizard,189,1830,Reptilia,Squamata,Leiocephalidae,Martinique,https://en.wikipedia.org/wiki/Martinique_curly-tailed_lizard,,,
+Navassa curly-tailed lizard,Navassa curly-tailed lizard,151,1868,Reptilia,Squamata,Leiocephalidae,"Navassa Island, U.S.",https://en.wikipedia.org/wiki/Navassa_curly-tailed_lizard,,,
+Pholidoscelis cineraceus,Guadeloupe ameiva,91,1928,Reptilia,Squamata,Teiidae,Guadeloupe,https://en.wikipedia.org/wiki/Guadeloupe_ameiva,,,
+Tropidophis bucculentus,Navassa Island dwarf boa,99,1920,Reptilia,Squamata,Tropidophiidae,Navassa Island,https://en.wikipedia.org/wiki/Tropidophis_bucculentus,,,
+Cyclura cornuta onchiopsis,Navassa Island iguana,20,1999,Reptilia,Squamata,Iguanidae,Navassa Island,https://en.wikipedia.org/wiki/Cyclura_cornuta_onchiopsis,,,
+Plethodon ainsworthi,Ainsworth's salamander,55,1964,Amphibia,Urodela,Plethodontidae,United States,https://en.wikipedia.org/wiki/Ainsworth%27s_salamander,,,
+Craugastor escoces,Craugastor escoces,15,2004,Amphibia,Anura,Craugastoridae,Costa Rica,https://en.wikipedia.org/wiki/Craugastor_escoces,,,

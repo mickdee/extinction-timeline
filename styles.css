@@ -5,8 +5,10 @@
   align-items: center;
   background-color: #212121;
   color: white;
-  height: 60px;
+  height: 72px;
   width: 100%;
+  box-shadow: 1px 5px 14px -4px rgba(0,0,0,0.3);
+  position: relative;
 }
 
 .navigation a {
@@ -32,14 +34,13 @@ body {
   margin: auto;
   background-color: white;
   box-shadow: 1px 5px 14px -4px rgba(0,0,0,0.3);
-  -webkit-box-shadow: 1px 5px 14px -4px rgba(0,0,0,0.3);
-  -moz-box-shadow: 1px 5px 14px -4px rgba(0,0,0,0.3);
 }
 
 .viz-and-legend-container {
   display: flex;
   justify-content: space-evenly;
   border: 1px solid #dedede;
+  background-color: #f9f9f9;
 }
 
 .viz-container {
@@ -47,12 +48,14 @@ body {
 }
 
 .legend-container {
-  width: 100px;
-  min-width: 100px;
+  width: 116px;
+  min-width: 116px;
 }
 
 .legend-container ul {
+  padding-top: 16px;
   padding-left: 0px;
+  padding-right: 16px;
 }
 
 .legend-dot {
@@ -231,14 +234,15 @@ div.infopanel {
   margin-top: 24px;
   position: relative;
   display: flex;
-  align-items: top;
+  align-items: center;
 }
 
 div.portrait {
   width: 150px;
-  max-height: 227px;
+  max-height: 220px;
+  min-height: 80px;
   margin-right: 24px;
-  border: 1px solid #dedede;
+  /* border: 1px solid #dedede; */
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
