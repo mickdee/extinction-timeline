@@ -86,9 +86,9 @@ d3.csv("data.csv", type, function(error, data) {
   if (error) throw error;
 
   var simulation = d3.forceSimulation(data)
-      .force("x", d3.forceX(function(d) { return x(d.yearsago); }).strength(8)) //the vertical spread of the dots -- lower number is narrower
+      .force("x", d3.forceX(function(d) { return x(d.yearsagobin); }).strength(4.5)) //the vertical spread of the dots -- lower number is narrower
       .force("y", d3.forceY(height / 2.2)) //a lower number moved the whole simulation down, higher moves it up
-      .force("collide", d3.forceCollide(7.2)) //the collision spread of the dots - lower is tighter
+      .force("collide", d3.forceCollide(8.2)) //the collision spread of the dots - lower is tighter
       .stop();
 
   for (var i = 0; i < 220; ++i) simulation.tick();
@@ -115,7 +115,7 @@ d3.csv("data.csv", type, function(error, data) {
        divtooltip.transition()
          .duration(200)
          .style("opacity", 1);
-       divtooltip.html("<strong>" + d.data.name + "</strong>" + "<br/>" + "<span class='tooltip-dot circle-" + d.data.class + "'>" + "</span>" + d.data.class + "<br/>" + d.data.yearsago + " years ago")
+       divtooltip.html("<strong>" + d.data.name + "</strong>" + "<br/>" + "<span class='tooltip-dot circle-" + d.data.class + "'>" + "</span>" + d.data.class + "<br/>" + d.data.yearsagobin + " years ago")
          .style("left", (d3.event.pageX + 16) + "px")
          .style("top", (d3.event.pageY - 20) + "px");
        })
@@ -133,13 +133,13 @@ d3.csv("data.csv", type, function(error, data) {
         divinfopanel.transition()
           .duration(200)
           .style("opacity", 1)
-        divinfopanel.html("<div class='portrait" + " icon-" + d.data.class + "'>" + "<img class='portraitimg " + d.data.imgclass + "' src='" + d.data.img + "'>" + "</div>" + "<div class='infopaneldata'>" + "<h2>" + d.data.name + "</h2>" + "<div class='infopanel-copy'>" + "<div class='mbm'>" + "<span class='legend-dot circle-" + d.data.class + "'>" + "</span>" + d.data.class + "</div>" + "<div class='mbm'>" + "<strong>Scientific Name: </strong>" + "<br/>" + d.data.id + "</div>" + "<div class='mbm'>" + "<strong>Estimated year extinct: </strong>" + "<br/>" + d.data.yearextinct + " (" + d.data.yearsago + " years ago)" + "</div>" + "<strong>Learn More:</strong>" + "<br/>" + "<a href='" + d.data.wikipedia + "' target='blank'>Wikipedia</a>" + "</div>" + "</div>" )
+        divinfopanel.html("<div class='portrait" + " icon-" + d.data.class + "'>" + "<img class='portraitimg " + d.data.imgclass + "' src='" + d.data.img + "'>" + "</div>" + "<div class='infopaneldata'>" + "<h2>" + d.data.name + "</h2>" + "<div class='infopanel-copy'>" + "<div class='mbm'>" + "<span class='legend-dot circle-" + d.data.class + "'>" + "</span>" + d.data.class + "</div>" + "<div class='mbm'>" + "<strong>Scientific Name: </strong>" + "<br/>" + d.data.id + "</div>" + "<div class='mbm'>" + "<strong>Estimated year extinct: </strong>" + "<br/>" + d.data.yearextinct + " (" + d.data.yearsagobin + " years ago)" + "</div>" + "<strong>Learn More:</strong>" + "<br/>" + "<a href='" + d.data.wikipedia + "' target='blank'>Wikipedia</a>" + "</div>" + "</div>" )
       });
 });
 
 function type(d) {
-  if (!d.yearsago) return;
-  d.yearsago = +d.yearsago;
+  if (!d.yearsagobin) return;
+  d.yearsagobin = +d.yearsagobin;
   return d;
 }
 
