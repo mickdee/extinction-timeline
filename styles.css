@@ -44,7 +44,7 @@ body {
 }
 
 .viz-container {
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 .legend-container {
