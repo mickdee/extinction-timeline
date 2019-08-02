@@ -10,17 +10,19 @@
   </div>
   <div class="body-container">
   	<div class="title-container">
-      <h1>Earth shaped by humans</br>
-      is an increasingly lonely one</h1>
+      <h1>Lost Creatures of The Recent Past</h1>
     </div>
     <div class="text-block-center">
-      <p>The Earth of 12,000 years ago (practically yesterday in geologic terms) was home to animals that appear ancient and alien, as if they belonged more to the age of dinosaurs than to our own: <a href="https://en.wikipedia.org/wiki/Moa" target="blank">Flightless birds that were twelve feet tall</a>, <a href="https://en.wikipedia.org/wiki/Megatherium" target="blank">sloths the size of elephants</a>, <a href="https://en.wikipedia.org/wiki/Doedicurus" target="blank">spike-tailed armadillo relatives that weighed as much as a Volkswagen</a>, and <a href="https://en.wikipedia.org/wiki/Irish_elk#Size_of_antlers" target="blank">giant deer with antlers spanning nearly nine feet</a> were just a few of the creatures that recently roamed the planet.</p>
+      <p>The Earth of 12,000 years ago was home to exotic animals that appear from a modern human perspective to be as long-gone as the dinosaurs, though they were alive and kicking practically yesterday in the grand scheme of geologic time: <a href="https://en.wikipedia.org/wiki/Moa" target="blank">Flightless birds that were twelve feet tall</a>, <a href="https://en.wikipedia.org/wiki/Megatherium" target="blank">sloths the size of elephants</a>, <a href="https://en.wikipedia.org/wiki/Doedicurus" target="blank">spike-tailed armadillo relatives that weighed as much as a Volkswagen</a>, and <a href="https://en.wikipedia.org/wiki/Irish_elk#Size_of_antlers" target="blank">giant deer with antlers spanning nearly nine feet</a> were just a few of the creatures that recently roamed the planet.</p>
       <p>While many factors lead to the extinction of animals during this period, known by Earth scientists as the Holocene epoch, evidence shows that human activity was often a direct contributor. More recently, the burning of fossil fuels, deforestation, ocean acidification and other forms of habitat alteration on a planetary scale have prompted the popularization of a name for a new epoch shaped by the habits of humanity — the <a href="https://www.smithsonianmag.com/science-nature/what-is-the-anthropocene-and-are-we-in-it-164801414/" target='blank'>Anthropocene</a>.</p>
-      <p>The timeline below shows recent extinctions of the last 12,000 years. It is not comprehensive and is skewed heavily toward larger animals because they are far more easily observed and documented than insects and microbes.</p>
+    </div>
+    <div class="text-block-center text-block-center_viz-title">
+      <h2>Timeline of Exctinctions in the Holocene</h2>
+      <p class="sub-title">Click on a circle to view species info</p>
     </div>
   	<div class="viz-and-legend-container">
       <div class="viz-container">
-        <svg width="750" height="520"></svg>
+        <svg width="750" height="440"></svg>
       </div> 
       <div class="legend-container">
         <ul>
@@ -37,6 +39,7 @@
     </div>
     <div class="infopanel-container"></div>
     <div class="text-block-center">
+      <p>The timeline above is not comprehensive and skews heavily toward larger animals because they are more easily documented than insects and microbes.</p>
       <div class="resources">
         <strong>Resources</strong>
         <ul>
@@ -50,15 +53,6 @@
 </body>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
-
-//   var aspect = width / height,
-//     chart = d3.select('svg');
-// d3.select(window)
-//   .on("resize", function() {
-//     var targetWidth = chart.node().getBoundingClientRect().width;
-//     chart.attr("width", targetWidth);
-//     chart.attr("height", targetWidth / aspect);
-//   });
 
 var svg = d3.select("svg"),
     margin = {top: 40, right: 40, bottom: 40, left: 70},
@@ -87,9 +81,9 @@ d3.csv("data.csv", type, function(error, data) {
   if (error) throw error;
 
   var simulation = d3.forceSimulation(data)
-      .force("x", d3.forceX(function(d) { return x(d.yearsagobin); }).strength(3)) //the vertical spread of the dots -- lower number is narrower
+      .force("x", d3.forceX(function(d) { return x(d.yearsagobin); }).strength(9)) //the vertical spread of the dots -- lower number is narrower
       .force("y", d3.forceY(height / 2.2)) //a lower number moved the whole simulation down, higher moves it up
-      .force("collide", d3.forceCollide(8)) //the collision spread of the dots - lower is tighter
+      .force("collide", d3.forceCollide(6.5)) //the collision spread of the dots - lower is tighter
       .stop();
 
   for (var i = 0; i < 220; ++i) simulation.tick();
@@ -98,6 +92,13 @@ d3.csv("data.csv", type, function(error, data) {
       .attr("class", "axis axis--x")
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(x).ticks(10, ".0s"));
+
+  svg.append("text")             
+      .attr("transform",
+            "translate(" + (width/2) + " ," + 
+                           (height + margin.top - 6) + ")")
+      .style("font-size","12px")
+      .text("Years Ago");
 
   var cell = g.append("g")
       .attr("class", "cells")
@@ -108,7 +109,7 @@ d3.csv("data.csv", type, function(error, data) {
       .polygons(data)).enter().append("g");
 
   cell.append("circle")
-      .attr("r", 6)
+      .attr("r", 5)
       .attr("class", function(d) { return "circle-" + d.data.class + " circle"})
       .attr("cx", function(d) { return d.data.x; })
       .attr("cy", function(d) { return d.data.y; })
