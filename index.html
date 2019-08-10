@@ -6,15 +6,18 @@
 <link rel="stylesheet" href="styles.css">
 <body>
   <div class="navigation">
-    <a href="#">storybook.earth</a>
+    <a href="#">stories from planet earth</a>
   </div>
   <div class="body-container">
   	<div class="title-container">
       <h1>Lost Creatures of The Recent Past</h1>
+      <p class="author">By Mike McDearmon</p>
     </div>
     <div class="text-block-center">
-      <p>The Earth of 12,000 years ago was home to exotic animals that appear from a modern human perspective to be as long-gone as the dinosaurs, though they were alive and kicking practically yesterday in the grand scheme of geologic time: <a href="https://en.wikipedia.org/wiki/Moa" target="blank">Flightless birds that were twelve feet tall</a>, <a href="https://en.wikipedia.org/wiki/Megatherium" target="blank">sloths the size of elephants</a>, <a href="https://en.wikipedia.org/wiki/Doedicurus" target="blank">spike-tailed armadillo relatives that weighed as much as a Volkswagen</a>, and <a href="https://en.wikipedia.org/wiki/Irish_elk#Size_of_antlers" target="blank">giant deer with antlers spanning nearly nine feet</a> were just a few of the creatures that recently roamed the planet.</p>
-      <p>While many factors lead to the extinction of animals during this period, known by Earth scientists as the <a href="https://www.britannica.com/science/Holocene-Epoch" target="blank">Holocene</a> epoch, evidence shows that human activity was often a direct contributor. More recently, the burning of fossil fuels, deforestation, ocean acidification and other forms of habitat alteration on a planetary scale have prompted the popularization of a name for a new epoch shaped by the habits of humanity — the <a href="https://www.smithsonianmag.com/science-nature/what-is-the-anthropocene-and-are-we-in-it-164801414/" target='blank'>Anthropocene</a>.</p>
+      <p>The Earth of 12,000 years ago was home to animals that look from a modern human perspective to be the work of science fiction, though in geologic terms they were alive practically yesterday: <a href="https://en.wikipedia.org/wiki/Moa" target="blank">Flightless birds </a>that were twelve feet tall, <a href="https://en.wikipedia.org/wiki/Megatherium" target="blank">giant sloths </a>the size of elephants, <a href="https://en.wikipedia.org/wiki/Doedicurus" target="blank">spike-tailed armadillo relatives </a> that weighed as much as a Fiat each, and <a href="https://en.wikipedia.org/wiki/Irish_elk#Size_of_antlers" target="blank">giant deer </a> with antlers spanning nearly nine feet are a few of the creatures that roamed the planet for millions of years. That is, until the great diaspora of humanity took them all by surprise.</p>
+      <p>While many factors lead to the extinction of animals during this period, known by Earth scientists as the <a href="https://www.britannica.com/science/Holocene-Epoch" target="blank">Holocene</a> epoch, evidence shows that humans were often a direct contributor even long before technological advances of the industrial revolution.<p> 
+      <p>Early in the Holocene large mammals like mastodons and giant sloths were particularly vulnerable to hunting. Human migration to the Americas around 13,000 years ago blindsided native species who until that point had been evolutionarily separated from humans for millions of years. Long reproductive cycles also meant that even small decreases in population had significant impacts on breeding productivity.</p>
+      <p>More recently, human population growth and industrialization have led to the extinction of species that were never direct targets of humans for food or other resources. The burning of fossil fuels, ocean acidification, deforestation, and other forms of habitat alteration have accelerated the rate of extinctions globally and prompted the naming of a new epoch shaped by the habits of humanity — the <a href="https://www.smithsonianmag.com/science-nature/what-is-the-anthropocene-and-are-we-in-it-164801414/" target='blank'>Anthropocene</a>.</p>
     </div>
     <div class="text-block-center text-block-center_viz-title">
       <h2>Timeline of Exctinctions in the Holocene</h2>
@@ -39,11 +42,11 @@
     </div>
     <div class="infopanel-container"></div>
     <div class="text-block-center">
-      <p>The timeline above is not comprehensive and skews heavily toward larger land animals because they are more easily documented than small creatures like insects, which also face <a href="https://www.nytimes.com/2018/11/27/magazine/insect-apocalypse.html" target="blank">immense population declines</a>. Many <a href="https://www.nature.com/articles/d41586-019-01810-6" target="blank">plant species have recently disappeared as well</a>, particularly in the tropics and on islands.</p>
-      <p>Is this normal? No. Background extinction rates are much lower. Closest analog in the past was millions of years ago. The rate of changing factors to the planet has no precedent in the past, even when looking at the 5 great extinction events of the last half billion years.</p>
+      <p>The timeline above is not comprehensive and skews heavily toward larger land animals because they are more easily documented than small creatures like insects, which also face <a href="https://www.nytimes.com/2018/11/27/magazine/insect-apocalypse.html" target="blank">immense population declines</a>. Many <a href="https://www.nature.com/articles/d41586-019-01810-6" target="blank">plant species have recently disappeared as well</a>, particularly in the tropics and on islands. Earth scientists estimate that modern extinction rates are somewhere between 100 and 1000 times background extinction rates. Background extinction refers to the rate of species that disappear in times of climate stability.</p>
+      <p>To put what's happening today in perspective... Is this normal? No. Background extinction rates are much lower. Closest analog in the past was millions of years ago. The rate of changing factors to the planet has no precedent in the past, even when looking at the 5 great extinction events of the last half billion years.</p>
       <p>What can we expect in the years ahead? Humans drive change at rates not seen in the geologic past. Every flight taken or package shipped increases the odds that an invasive species will inadvertantly decimate local animal populations, as witnessed many times in the recent past (golden toad).</p>
       <div class="resources">
-        <strong>Resources</strong>
+        <strong>References</strong>
         <ul>
          <li><a href="https://en.wikipedia.org/wiki/Timeline_of_extinctions_in_the_Holocene" target="blank">Timeline of extinctions in the Holocene</a></li> 
          <li><a href="https://en.wikipedia.org/wiki/List_of_North_American_animals_extinct_in_the_Holocene" target="blank">List of North American Animals Extinct in the Holocene</a></li>
@@ -85,7 +88,7 @@ d3.csv("data.csv", type, function(error, data) {
   var simulation = d3.forceSimulation(data)
       .force("x", d3.forceX(function(d) { return x(d.yearsagobin); }).strength(9)) //the vertical spread of the dots -- lower number is narrower
       .force("y", d3.forceY(height / 2.2)) //a lower number moved the whole simulation down, higher moves it up
-      .force("collide", d3.forceCollide(6.5)) //the collision spread of the dots - lower is tighter
+      .force("collide", d3.forceCollide(7.5)) //the collision spread of the dots - lower is tighter
       .stop();
 
   for (var i = 0; i < 220; ++i) simulation.tick();
@@ -111,7 +114,7 @@ d3.csv("data.csv", type, function(error, data) {
       .polygons(data)).enter().append("g");
 
   cell.append("circle")
-      .attr("r", 5)
+      .attr("r", 6)
       .attr("class", function(d) { return "circle-" + d.data.class + " circle"})
       .attr("cx", function(d) { return d.data.x; })
       .attr("cy", function(d) { return d.data.y; })
@@ -137,7 +140,7 @@ d3.csv("data.csv", type, function(error, data) {
         divinfopanel.transition()
           .duration(200)
           .style("opacity", 1)
-        divinfopanel.html("<div class='portrait" + " icon-" + d.data.class + "'>" + "<img class='portraitimg " + d.data.imgclass + "' src='" + d.data.img + "'>" + "</div>" + "<div class='infopaneldata'>" + "<h2>" + d.data.name + "</h2>" + "<div class='infopanel-copy'>" + "<div class='mbm'>" + "<span class='legend-dot circle-" + d.data.class + "'>" + "</span>" + d.data.class + "</div>" + "<div class='mbm'>" + "<strong>Scientific Name: </strong>" + "<br/>" + d.data.id + "</div>" + "<div class='mbm'>" + "<strong>Estimated year extinct: </strong>" + "<br/>" + d.data.yearextinct + " (" + d.data.yearsagobin + " years ago)" + "</div>" + "<strong>Learn More:</strong>" + "<br/>" + "<a href='" + d.data.wikipedia + "' target='blank'>Wikipedia</a>" + "</div>" + "</div>" )
+        divinfopanel.html("<div class='portrait" + " icon-" + d.data.class + "'>" + "<img class='portraitimg " + d.data.imgclass + "' src='" + d.data.img + "'>" + "</div>" + "<div class='infopaneldata'>" + "<h2>" + d.data.name + "</h2>" + "<div class='infopanel-copy'>" + "<div class='mbm'>" + "<span class='legend-dot circle-" + d.data.class + "'>" + "</span>" + d.data.class + "</div>" + "<div class='mbm'>" + "<strong>Scientific Name: </strong>" + "<br/>" + d.data.id + "</div>" + "<div class='mbm'>" + "<strong>Estimated year extinct: </strong>" + "<br/>" + d.data.yearextinctera + " (" + d.data.yearsagobin + " years ago)" + "</div>" + "<strong>Learn More:</strong>" + "<br/>" + "<a href='" + d.data.wikipedia + "' target='blank'>Wikipedia</a>" + "</div>" + "</div>" )
       });
 });
 
